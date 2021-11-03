@@ -4,6 +4,19 @@
     box-sizing: border-box;
 }
 
+:root{
+    /* colors */
+    --background-color: #090910;
+    --eye-white: white;
+    --eye-black: black;
+    --dark-green: #125c13;
+    --light-green: #30d733;
+    /* gradients */
+    --gradient-percentage: 70%;
+    /* shadows */
+    --inner-eye-shadow: inset 0 0 2rem 1rem rgba(0,0,0,0.4);
+}
+
 html{
     font-size: 62.5%;
 }
@@ -11,63 +24,68 @@ html{
 body{
     font-size: 1.6rem;
     min-height:100vh;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    background: #090910;
+    background: var(--background-color);
 }
 
 .eyesEmoticon{
     width:40rem;
     height:40rem;
     position:relative;
-    display:flex;
-    justify-content: center;
-    align-items: center;
     gap:2rem;
 }
 
 .eyesEmoticon__eye{
     width:14rem;
     height:26rem;
-    background:white;
+    background:var(--eye-white);
     border-radius: 50%;
     position:relative;
-    box-shadow: inset 0 0 2rem 1rem rgba(0,0,0,0.4);
+    box-shadow: var(--inner-eye-shadow);
 }
 
 .eyesEmoticon__iris{
     width:8rem;
     height:8rem;
-    background:linear-gradient(#125c13,70%,#30d733);
+    background: linear-gradient(
+            var(--dark-green),
+            var(--gradient-percentage),
+            var(--light-green));
     border-radius:50%;
     top:40%;
     left:10%;
     position:absolute;
 }
 
+/* common styling for before and after */
+.eyesEmoticon__iris::before, .eyesEmoticon__iris::after{
+    content:"";
+    position:absolute;
+    border-radius:50%;
+}
+
 /* pupil */
 .eyesEmoticon__iris::before{
-    content:"";
     height:65%;
     width:65%;
-    background:black;
-    position:absolute;
+    background:var(--eye-black);
     top:50%;
     left:50%;
-    border-radius:50%;
     transform: translate(-50%,-50%);
 }
 
 /* white shine on eye */
 .eyesEmoticon__iris::after{
-    content:"";
     height: 35%;
     width:30%;
-    position:absolute;
     top:10%;
     left:18%;
-    background:white;
-    border-radius: 50%;
+    background:var(--eye-white);
     transform:rotate(30deg);
+}
+
+/* utility classes */
+.u-display-flex-center{
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
