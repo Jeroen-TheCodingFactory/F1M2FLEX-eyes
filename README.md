@@ -19,3 +19,4 @@ Het screenshot voor mobiel en desktop zijn identiek, vandaar dat alleen desktop 
 ## Resources
 1. Artikel gebruikt voor het opzoeken van UTF-8 codes van emoticons. https://www.w3schools.com/charsets/ref_emoji.asp
 2. Encyclopedie van emojicons. Gebruikt voor inspiratie. https://emojipedia.org/eyes/ 
+3. Validator voor het checken van mijn code en het opsporen van fouten. https://validator.w3.org/
