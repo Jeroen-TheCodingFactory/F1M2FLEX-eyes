@@ -31,7 +31,6 @@ body{
     width:40rem;
     height:40rem;
     position:relative;
-    gap:2rem;
 }
 
 .eyesEmoticon__eye{
@@ -42,6 +41,21 @@ body{
     position:relative;
     box-shadow: var(--inner-eye-shadow);
 }
+
+.eyesEmoticon__eye--first{
+    margin-right:2rem;
+}
+
+/* checking support for gap, otherwise use margin */
+@supports(gap: 2rem){
+    .eyesEmoticon{
+        gap: 2rem;
+    }
+    .eyesEmoticon__eye:nth-of-type(1){
+        margin-right:0;
+    }
+}
+
 
 .eyesEmoticon__iris{
     width:8rem;
