@@ -1,4 +1,4 @@
-# Emoticon Eyes (3D)
+# Eyes Emoji (3D)
 ![Het gerealiseerde eindproduct op desktop.](https://eyes.css-art.nl/img/eyes.png "Emoticon Eyes")
 
 ## Intro
